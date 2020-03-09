@@ -1,0 +1,2 @@
+rootProject.name='Kumpulan Makanan - Makanan Tradisional'
+include ':app'
