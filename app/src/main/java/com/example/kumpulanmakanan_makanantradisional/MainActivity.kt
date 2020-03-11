@@ -12,15 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val testData = createResepData()
-        rv_parts.layoutManager = LinearLayoutManager(this)
-        rv_parts.setHasFixedSize(true)
-        rv_parts.adapter = ResepAdapter(testData, { resepItem : ResepData -> resepItemClicked(resepItem) })
+        resep_parts.layoutManager = LinearLayoutManager(this)
+        resep_parts.setHasFixedSize(true)
+        resep_parts.adapter = ResepAdapter(testData, { resepItem : ResepData -> resepItemClicked(resepItem) })
     }
     private fun resepItemClicked(resepItem : ResepData) {
         val showDetailActivityIntent = Intent(this, ResepDetailActivity::class.java)
         showDetailActivityIntent.putExtra(Intent.EXTRA_TEXT, resepItem.namaMakanan.toString())
-        showDetailActivityIntent.putExtra(Intent.EXTRA_COMPONENT_NAME, resepItem.daerahMakanan)
-        showDetailActivityIntent.putExtra(Intent.EXTRA_SPLIT_NAME, resepItem.resepMakanan)
+        showDetailActivityIntent.putExtra(Intent.EXTRA_COMPONENT_NAME, resepItem.daerahMakanan.toString())
+        showDetailActivityIntent.putExtra(Intent.EXTRA_SPLIT_NAME, resepItem.resepMakanan.toString())
+        showDetailActivityIntent.putExtra(Intent.EXTRA_REFERRER, resepItem.fotoResep.toString())
         startActivity(showDetailActivityIntent)
     }
     private fun createResepData() : List<ResepData> {

@@ -14,12 +14,14 @@ class ResepDetailActivity : AppCompatActivity (){
         var intentThatStartedThisActivity = getIntent()
 
         if (intentThatStartedThisActivity.hasExtra(Intent.EXTRA_TEXT)) {
-            var partId = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT)
-            var nama = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_COMPONENT_NAME)
-            var email = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_SPLIT_NAME)
-            tv_item_id.text = partId
-            tv_name.text = nama
-            tv_email.text = email
+            var nama= intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT)
+            var daerah = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_COMPONENT_NAME)
+            var isiresep = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_SPLIT_NAME)
+            var fotoresep = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_REFERRER).toInt()
+            tv_nama2.text = nama
+            tv_daerah2.text = daerah
+            tv_isiresep.text = isiresep
+            tv_foto2.setImageResource(fotoresep)
 
         }
     }

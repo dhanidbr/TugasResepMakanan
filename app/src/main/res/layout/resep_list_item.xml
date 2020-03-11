@@ -13,13 +13,13 @@
         app:srcCompat="@drawable/resep" />
 
     <TextView
-        android:id="@+id/tv_part_item_name"
+        android:id="@+id/tv_nama"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:text="Nama Resep"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_part_id"
+        app:layout_constraintBottom_toTopOf="@+id/tv_daerah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tv_foto"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/tv_part_id"
+        android:id="@+id/tv_daerah"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -35,6 +35,6 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_part_item_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_part_item_name" />
+        app:layout_constraintStart_toStartOf="@+id/tv_nama"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kumpulan Makanan - Makanan Tradisional</string>
+    <string name="textview">TextView</string>
 </resources>
